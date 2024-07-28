@@ -14,7 +14,7 @@ $heading = 'Create Post';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errors = [];
 
-    if (! Validator::string($_POST['body'], 1, 5000)) {
+    if (! Validator::string($_POST['body'], 1, 10000)) {
         $errors['body'] = 'A post of no more than 5,000 characters is required';
     }
 
